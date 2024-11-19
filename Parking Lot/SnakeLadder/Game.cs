@@ -33,6 +33,16 @@
                     if (position != null) {
                         int number = this.dice.GetDiceValue();
                         player.UpdatePositionByValue(position, number);
+                        bool snakeExist = player.Position.SnakeExist(snakes);
+                        if (snakeExist)
+                        {
+                            player.UpdatePositionByValue(position, );
+                        }
+                        bool ladderExist = player.Position.LadderExist(LadderList);
+                        if (snakeExist)
+                        {
+                            player.UpdatePositionByValue(position, );
+                        }
                         this.ObserverClass.NotifyUsers();
                         if(position.getPostionNumber() == 100)
                         {
