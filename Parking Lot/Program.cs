@@ -1,4 +1,61 @@
+using Parking_Lot.SnakeLadder;
 using System.Text.Json.Serialization;
+
+ List<Player> PlayerList;
+List<Ladder> LadderList = new List<Ladder>();
+List<Snake> snakes = new List<Snake>();
+PlayerList = new List<Player>()
+            {
+                new Player("Gaurav", new Position(0,0)),
+                new Player("Adarsh", new Position(0,0)),
+            };
+// Convert snake positions
+var snakes1 = new List<(int Head, int Tail)>
+            {
+                (62, 5), (33, 6), (49, 9), (88, 16),
+                (41, 20), (56, 53), (98, 64), (93, 73), (95, 75)
+            };
+
+foreach (var snake in snakes1)
+{
+    Position head = Position.GetPositionFromNumber(snake.Head);
+    Position tail = Position.GetPositionFromNumber(snake.Tail);
+    snakes.Add(new Snake(head, tail));
+}
+
+// Convert ladder positions
+var ladders1 = new List<(int Start, int End)>
+            {
+                (2, 37), (27, 46), (10, 32), (51, 68),
+                (61, 79), (65, 84), (71, 91), (81, 100)
+            };
+
+foreach (var ladder in ladders1)
+{
+    Position start = Position.GetPositionFromNumber(ladder.Start);
+    Position end = Position.GetPositionFromNumber(ladder.End);
+    LadderList.Add(new Ladder(start, end));
+}
+new Game(PlayerList, LadderList, snakes);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 var builder = WebApplication.CreateSlimBuilder(args);
 
