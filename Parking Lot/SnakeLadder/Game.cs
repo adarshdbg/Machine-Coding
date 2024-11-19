@@ -36,12 +36,12 @@
                         bool snakeExist = player.Position.SnakeExist(snakes);
                         if (snakeExist)
                         {
-                            player.UpdatePositionByValue(position, );
+                            player.UpdatePositionByValue(position, 100);
                         }
                         bool ladderExist = player.Position.LadderExist(LadderList);
                         if (snakeExist)
                         {
-                            player.UpdatePositionByValue(position, );
+                            player.UpdatePositionByValue(position, 100);
                         }
                         this.ObserverClass.NotifyUsers();
                         if(position.getPostionNumber() == 100)
