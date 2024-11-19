@@ -33,13 +33,14 @@
                     if (position != null) {
                         int number = this.dice.GetDiceValue();
                         player.UpdatePositionByValue(position, number);
-
+                        this.ObserverClass.NotifyUsers();
                         if(position.getPostionNumber() == 100)
                         {
                             winnerPlayerName = player;
                             winnerExist = true;
                             break;
                         }
+
                     }
                 }
 
