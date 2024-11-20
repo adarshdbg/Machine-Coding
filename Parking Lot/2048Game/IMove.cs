@@ -3,6 +3,7 @@
     public interface IMove
     {
         void Move(List<List<Position>> positions);
+        void CreateNewCellPosition();
     }
 
     public enum MoveDir

@@ -6,12 +6,18 @@ namespace Parking_Lot._2048Game
     }
     public class LeftMoveStrategy : IMove
     {
+        public void CreateNewCellPosition()
+        {
+            throw new NotImplementedException();
+        }
+
         public void Move(List<List<Position>> positions)
         {
             foreach (var row in positions)
             {
                 SlideAndMergeRow(row);
             }
+            this.CreateNewCellPosition();
         }
 
         private void SlideAndMergeRow(List<Position> row)
@@ -53,12 +59,17 @@ namespace Parking_Lot._2048Game
 
     public class RightMoveStrategy : IMove
     {
+        public void CreateNewCellPosition()
+        {
+            throw new NotImplementedException();
+        }
         public void Move(List<List<Position>> positions)
         {
             foreach (var row in positions)
             {
                 SlideAndMergeRow(row);
             }
+            this.CreateNewCellPosition();
         }
 
         private void SlideAndMergeRow(List<Position> row)
@@ -99,6 +110,10 @@ namespace Parking_Lot._2048Game
     }
     public class TopMoveStrategy : IMove
     {
+        public void CreateNewCellPosition()
+        {
+            throw new NotImplementedException();
+        }
         public void Move(List<List<Position>> positions)
         {
             int cols = positions[0].Count;
@@ -107,6 +122,7 @@ namespace Parking_Lot._2048Game
             {
                 SlideAndMergeColumn(positions, col);
             }
+            this.CreateNewCellPosition();
         }
 
         private void SlideAndMergeColumn(List<List<Position>> positions, int col)
@@ -155,6 +171,10 @@ namespace Parking_Lot._2048Game
     }
     public class BottomMoveStrategy : IMove
     {
+        public void CreateNewCellPosition()
+        {
+            throw new NotImplementedException();
+        }
         public void Move(List<List<Position>> positions)
         {
             int cols = positions[0].Count;
@@ -163,6 +183,7 @@ namespace Parking_Lot._2048Game
             {
                 SlideAndMergeColumn(positions, col);
             }
+            this.CreateNewCellPosition();
         }
 
         private void SlideAndMergeColumn(List<List<Position>> positions, int col)

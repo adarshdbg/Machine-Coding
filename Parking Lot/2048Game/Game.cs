@@ -18,7 +18,7 @@
 
                 if(checkWinner)
                 {
-                    Console.WriteLine("Congratulations")
+                    Console.WriteLine("Congratulations");
                     return;
                 }
             }
